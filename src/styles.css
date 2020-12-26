@@ -1,0 +1,75 @@
+html {
+  color: darkgrey;
+}
+
+.flex-space-around {
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: space-around;
+}
+
+.carousel {
+  width: 900px;
+}
+
+.carousel-clicker-container {
+  position: absolute;
+  bottom: 400px;
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+}
+
+.main-carousel-image {
+  width: 900px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.preview-image {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.carousel-clicker-left {
+  border-radius: 5px;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+}
+
+.carousel-clicker-right {
+  border-radius: 5px;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#content {
+  position: relative;
+  /* height: 100vh; */
+  margin-right: 5em;
+  margin-left: 5em;
+}
+
+.section {
+  background-color: whitesmoke;
+  padding: 2em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  box-shadow: 2px 4px grey;
+}
+
+body: {
+  margin: 0;
+}

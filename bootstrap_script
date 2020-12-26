@@ -1,0 +1,8 @@
+sudo wget http://nginx.org/keys/nginx_signing.key
+sudo apt-key add nginx_signing.key
+cd /etc/apt
+
+# nginix sources >> soures.list
+deb http://security.ubuntu.com/ubuntu xenial-security main >> sources.list
+deb http://nginx.org/packages/ubuntu xenial nginx >> sources.list
+deb-src http://nginx.org/packages/ubuntu xenial nginx >> sources.list
