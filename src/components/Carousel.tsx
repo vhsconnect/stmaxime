@@ -15,27 +15,31 @@ export function Carousel() {
   const getImageIndex = encloseImageLength(state.images.length)
 
   return (
-    <div className="carousel">
+    <div className="carousel object-center">
       <div className="carousel-clicker-container">
         <a
-          className="carousel-clicker-left"
+          className="hidden lg:block clicker carousel-clicker-left"
           onClick={() => {
             dispatch({ type: 'incrementImageIndex' })
           }}
-        />
+        >
+          <img src="/public/left-arrow.png" alt="" />
+        </a>
         <a
-          className="carousel-clicker-right"
+          className="hidden lg:block clicker carousel-clicker-right"
           onClick={() => {
             dispatch({ type: 'decrementImageIndex' })
           }}
-        />
+        >
+          <img src="/public/right-arrow.png" alt="" />
+        </a>
       </div>
       <img
         className="main-carousel-image"
         src={state.images[state.imageIndex]}
         alt=""
       />
-      <div className="image-previews">
+      <div className="hidden md:flex">
         <a
           onClick={() => {
             dispatch({ type: 'incrementBy', value: 1 })
