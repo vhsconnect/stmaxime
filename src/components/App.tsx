@@ -46,7 +46,7 @@ export function App() {
       </div>
       <div
         id="carousel"
-        className="flex flex-wrap rounded p-4 m-6 height-max-content justify-center lg:bg-white l:m-20 lg:shadow-lg xl:my-0"
+        className="flex flex-wrap rounded p-4 m-6 height-max-content justify-center lg:bg-white l:m-20 lg:shadow-lg xl:my-5 2xl:my-0"
       >
         <Carousel />
       </div>
