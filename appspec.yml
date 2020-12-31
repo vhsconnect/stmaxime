@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+files:
+  - source: /dist/index.html
+    destination: /home/ubuntu/public_html
+  - source: /dist/bundle.js
+    destination: /home/ubuntu/public_html
+hooks:
+  BeforeInstall:
+    - location: scripts/bootstrap
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: scripts/start
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop
+      timeout: 300
+      runas: root

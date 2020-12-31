@@ -1,0 +1,28 @@
+#!/bin/bash
+NGINX_INSTALLED=$(dpkg --get-selections | grep nginx)
+if [[ $NGINX_INSTALLED =~ .*nginx.* ]]
+then echo sudo apt-get install nginx
+else
+  mkdir public_html
+  wget http://nginx.org/keys/nginx_signing.key
+  apt-key add nginx_signing.key
+  cd /etc/apt
+  echo "deb http://security.ubuntu.com/ubuntu xenial-security main" >> sources.list
+  echo "deb http://nginx.org/packages/ubuntu xenial nginx" >> sources.list
+  echo "deb-src http://nginx.org/packages/ubuntu xenial nginx" >> sources.list
+  apt update
+  apt-get install nginx -y
+  cd 
+  cd /etc/nginx/conf.d
+  rm default.conf
+  touch server.conf
+  cat >server.conf <<EOL
+  server {
+      root /home/ubuntu/public_html;
+
+      location / {  }
+
+  }
+EOL
+cd;
+fi 
