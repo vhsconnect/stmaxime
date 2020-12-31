@@ -6,3 +6,8 @@ cd /etc/apt
 deb http://security.ubuntu.com/ubuntu xenial-security main >> sources.list
 deb http://nginx.org/packages/ubuntu xenial nginx >> sources.list
 deb-src http://nginx.org/packages/ubuntu xenial nginx >> sources.list
+
+sudo apt update
+sudo apt-get nginx
+
+
