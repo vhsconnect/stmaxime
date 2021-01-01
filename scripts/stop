@@ -1,2 +1,6 @@
 #!/bin/bash
-service nginx stop
+NGINX_INSTALLED=$(dpkg --get-selections | grep nginx)
+if [[ $NGINX_INSTALLED =~ .*nginx.* ]]
+  then service nginx stop;
+  else echo ok;
+fi
